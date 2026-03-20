@@ -7,7 +7,7 @@ const app = express();
 
 connectDB();
 
-app.use(cors());
+app.use(cors({ origin: 'https://dsa-sheet-apna-college.onrender.com' }));
 app.use(express.json());
 
 app.use('/api/auth', require('./routes/authRoutes'));
